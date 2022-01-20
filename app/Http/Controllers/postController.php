@@ -35,6 +35,10 @@ class postController extends Controller
         return view('CRUD.update',compact('post'));
     }
     public function change(Request $request,$id){
+        $request->validate([
+            'title'=>'required',
+            'body'=>'required'
+        ]);
         Post::find($id)->update([
             'title'=>$request->title,
             'content'=>$request->body

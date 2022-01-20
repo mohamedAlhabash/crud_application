@@ -10,10 +10,10 @@
 <body>
     <div class="container my-5">
         @include('CRUD.error.error')
-        <h2> Add New Posts </h2>
+        <h2> Update Posts </h2>
         <form action="{{route('change',$post->id)}}" method="post">
             @csrf
-            @method('put');
+            @method('put')
             <div class="mb-4">
                 <input type="text" name="title" placeholder="TiTle" class="form-control" value="{{$post->title}}">
             </div>
@@ -25,7 +25,5 @@
             <button class="btn btn-success px-5 btn-lg">Submit</button>
         </form>
     </div>
-
-
-</body>
+  </body>
 </html>
