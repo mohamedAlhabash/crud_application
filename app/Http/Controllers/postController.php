@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class postController extends Controller
 {
     public function index(){
-        $posts=Post::orderBy('id','DESC')->paginate(10);
+        $posts=Post::orderBy('id','DESC')->paginate(5);
         return view('CRUD.index',compact('posts'));
     }
     public function delete($id){
