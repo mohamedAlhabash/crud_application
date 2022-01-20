@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 Route::prefix('posts')->controller(postController::class)->group(function(){
     Route::get('','index');
-    Route::get('/delete/{id}','delete')->name('delete');
+    Route::get('/{id}','delete')->name('delete');
     Route::get('/add','add')->name('add');
     Route::post('/add','store')->name('store');
     Route::get('/{id}/update','update')->name('update');
-    Route::put('/{id}/update','change')->name('change');
+    Route::put('/{id}','change')->name('change');
 });
 
 // Route::get('/', function () {

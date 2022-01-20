@@ -33,7 +33,7 @@
                     <td>{{$post->id}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->content}}</td>
-                    <td>{{$post->created_at->format('Y-m-d') }}</td>{{--format('H:i d, M Y')--}}
+                    <td>{{$post->created_at->format('H:i d-m-Y')}}</td>
                     <td>{{$post->updated_at->format('H:i d-m-Y')}}</td>
                     <td>
                     <a class="btn btn-warning btn-sm btn-lg " href="{{route('update',$post->id)}}" >Update</a>

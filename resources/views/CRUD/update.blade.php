@@ -22,7 +22,7 @@
                 <textarea name="body"  rows="5" class="form-control" placeholder="Body">{{$post->content}}</textarea>
                 </div>
 
-            <button class="btn btn-success px-5 btn-lg">Submit</button>
+            <button class="btn btn-success px-5 btn-lg">Update</button>
         </form>
     </div>
   </body>

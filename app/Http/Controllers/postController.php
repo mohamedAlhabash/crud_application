@@ -43,7 +43,7 @@ class postController extends Controller
             'title'=>$request->title,
             'content'=>$request->body
         ]);
-        return redirect('posts')->with('success','Post Added');
+        return redirect('posts')->with('success','Post Updated');
     }
 
 
