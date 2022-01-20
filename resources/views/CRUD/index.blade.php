@@ -36,6 +36,7 @@
                 <th>Title</th>
                 <th>Content</th>
                 <th style="width: 200px">Created At</th>
+                <th style="width: 200px">Updated At</th>
                 <th style="width: 150px">Action</th>
             </tr>
             @foreach ($posts as $post)
@@ -44,8 +45,9 @@
                     <td>{{$post->title}}</td>
                     <td>{{$post->content}}</td>
                     <td>{{$post->created_at}}</td>
+                    <td>{{$post->updated_at}}</td>
                     <td>
-                    <a class="btn btn-primary btn-sm btn-lg " href="#" >Update</a>
+                    <a class="btn btn-warning btn-sm btn-lg " href="{{route('update',$post->id)}}" >Update</a>
                     <a onclick="return confirm ('Are You Sure?')" class="btn btn-danger btn-sm btn-lg " href="{{route('delete',$post->id)}}" >Delete</a>
                     </td>
                 </tr>

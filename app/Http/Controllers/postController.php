@@ -30,5 +30,17 @@ class postController extends Controller
         ]);
         return redirect('posts')->with('success','Post Added');
     }
+    public function update($id){
+        $post=Post::find($id);
+        return view('CRUD.update',compact('post'));
+    }
+    public function change(Request $request,$id){
+        Post::find($id)->update([
+            'title'=>$request->title,
+            'content'=>$request->body
+        ]);
+        return redirect('posts')->with('success','Post Added');
+    }
+
 
 }
