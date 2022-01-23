@@ -11,7 +11,7 @@
     <div class="container my-5">
         @include('CRUD.error.error')
         <h2> Add New Posts </h2>
-        <form action="{{route('store')}}" method="post">
+        <form action="{{route('posts.store')}}" method="post">
             @csrf
             <div class="mb-4">
                 <input type="text" name="title" placeholder="TiTle" class="form-control">
@@ -24,6 +24,7 @@
             <button class="btn btn-success px-5 btn-lg">Submit</button>
         </form>
     </div>
+
 
 
 </body>

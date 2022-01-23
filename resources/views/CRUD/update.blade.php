@@ -11,7 +11,7 @@
     <div class="container my-5">
         @include('CRUD.error.error')
         <h2> Update Posts </h2>
-        <form action="{{route('change',$post->id)}}" method="post">
+        <form action="{{route('posts.change',$post->id)}}" method="post">
             @csrf
             @method('put')
             <div class="mb-4">

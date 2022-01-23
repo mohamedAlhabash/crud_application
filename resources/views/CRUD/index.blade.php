@@ -17,7 +17,7 @@
           @endif
           <div class="d-flex mb-5 justify-content-between">
             <h2> All Posts </h2>
-         <a href="{{route('add')}}"><button class="btn btn-primary btn-lg">Add New Post</button></a>
+         <a href="{{route('posts.add')}}"><button class="btn btn-primary btn-lg">Add New Post</button></a>
     </div>
         <table class="table">
             <tr>
@@ -36,8 +36,13 @@
                     <td>{{$post->created_at->format('H:i d-m-Y')}}</td>
                     <td>{{$post->updated_at->format('H:i d-m-Y')}}</td>
                     <td>
-                    <a class="btn btn-warning btn-sm btn-lg " href="{{route('update',$post->id)}}" >Update</a>
-                    <a onclick="return confirm ('Are You Sure?')" class="btn btn-danger btn-sm btn-lg " href="{{route('delete',$post->id)}}" >Delete</a>
+                    <a class="btn btn-warning btn-sm btn-lg " href="{{route('posts.update',$post->id)}}" >Update</a>
+                    <a onclick="return confirm ('Are You Sure?')" class="btn btn-danger btn-sm btn-lg " href="{{route('posts.delete',$post->id)}}" >Delete</a>
+                  {{-- <form action="{{route('delete',$post->id)}}" method="post">
+                     @method("delete")
+                    @csrf
+                    <button onclick="return confirm ('Are You Sure?')" class="btn btn-danger btn-sm btn-lg ">Delete</button>
+                     </form> --}}
                     </td>
                 </tr>
             @endforeach
@@ -47,3 +52,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
 </html>
+
