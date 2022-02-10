@@ -10,20 +10,16 @@
 <body>
     <div class="container my-5">
         @include('CRUD.error.error')
-        <h2> Add New Posts </h2>
-        <form action="{{route('category.store')}}" method="post">
+        <h2> Update Posts </h2>
+        <form action="{{route('category.update',$category->id)}}" method="post">
             @csrf
+            @method('put')
             <div class="mb-4">
-                <input type="text" name="title" placeholder="Title" class="form-control">
+                <input type="text" name="name" placeholder="Name" class="form-control" value="{{$category->name}}">
             </div>
 
-            <div class="mb-4">
-                <textarea name="body"  rows="5" class="form-control" placeholder="Body"></textarea>
-                </div>
-
-            <button class="btn btn-success px-5 btn-lg">Submit</button>
+            <button class="btn btn-success px-5 btn-lg">Update</button>
         </form>
     </div>
-
-</body>
+  </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\postController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::prefix('posts')->name('posts.')->controller(postController::class)->group
     Route::get('/{id}/update','update')->name('update');
     Route::put('/{id}','change')->name('change');
 });
+Route::resource('category',CategoryController::class);
 
 // Route::get('/', function () {
 //     return view('welcome');

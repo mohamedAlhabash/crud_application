@@ -14,12 +14,8 @@
         <form action="{{route('category.store')}}" method="post">
             @csrf
             <div class="mb-4">
-                <input type="text" name="title" placeholder="Title" class="form-control">
+                <input type="text" name="name" placeholder="Name" class="form-control">
             </div>
-
-            <div class="mb-4">
-                <textarea name="body"  rows="5" class="form-control" placeholder="Body"></textarea>
-                </div>
 
             <button class="btn btn-success px-5 btn-lg">Submit</button>
         </form>
