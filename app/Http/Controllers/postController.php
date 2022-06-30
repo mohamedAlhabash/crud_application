@@ -20,12 +20,12 @@ class postController extends Controller
     }
 
     public function store(Request $request){
-        $request->validate([
-            'title'=>'required',
-            'body'=>'required'
-        ]);
+        // $request->validate([
+        //     'title'=>'required',
+        //     'content'=>'required'
+        // ]);
         Post::create([
-            'title'=>$request->title,
+            'name'=>$request->title,
             'content'=>$request->body
         ]);
         return redirect('posts')->with('success','Post Added');
